@@ -9,7 +9,7 @@ export class AuthenticationMiddleware implements NestMiddleware {
   constructor(private readonly requestService: RequestService) {}
 
   use(req: Request, res: Response, next: NextFunction) {
-    this.logger.log(AuthenticationMiddleware.name);
+    this.logger.log('Auth Middleware');
 
     // authenticate the request or do some logic to extract user
     // what we'd get back hypothetically
